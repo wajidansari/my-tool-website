@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Website</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
+
+    /* Navigation Menu */
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 5px 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #007BFF;
+    }
+
+    /* Tool Cards Section */
+    .tools {
+      padding: 40px 0;
+    }
+
+    .tools .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: #007BFF;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .card button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .tools .container {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      .card {
+        padding: 15px;
+      }
+
+      .card h2 {
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
+
+      .card button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>My Tool Website</h1>
+      <p>Explore useful tools to make your life easier!</p>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Tool Cards Section -->
+  <section class="tools" id="tools">
+    <div class="container">
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Calculator">
+        <h2>Calculator</h2>
+        <p>A simple calculator for basic math operations.</p>
+        <button onclick="openTool('calculator')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Currency Converter">
+        <h2>Currency Converter</h2>
+        <p>Convert currencies in real-time.</p>
+        <button onclick="openTool('currency-converter')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Notes">
+        <h2>Notes</h2>
+        <p>Take quick notes and save them.</p>
+        <button onclick="openTool('notes')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Password Generator">
+        <h2>Password Generator</h2>
+        <p>Generate strong and secure passwords.</p>
+        <button onclick="openTool('password-generator')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Unit Converter">
+        <h2>Unit Converter</h2>
+        <p>Convert between different units of measurement.</p>
+        <button onclick="openTool('unit-converter')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="BMI Calculator">
+        <h2>BMI Calculator</h2>
+        <p>Calculate your Body Mass Index.</p>
+        <button onclick="openTool('bmi-calculator')">Open Tool</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 My Tool Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Function to handle tool button clicks
+    function openTool(toolName) {
+      switch (toolName) {
+        case 'calculator':
+          alert('Opening Calculator...');
+          // Add your calculator logic or link here
+          break;
+        case 'currency-converter':
+          alert('Opening Currency Converter...');
+          // Add your currency converter logic or link here
+          break;
+        case 'notes':
+          alert('Opening Notes...');
+          // Add your notes logic or link here
+          break;
+        case 'password-generator':
+          alert('Opening Password Generator...');
+          // Add your password generator logic or link here
+          break;
+        case 'unit-converter':
+          alert('Opening Unit Converter...');
+          // Add your unit converter logic or link here
+          break;
+        case 'bmi-calculator':
+          alert('Opening BMI Calculator...');
+          // Add your BMI calculator logic or link here
+          break;
+        default:
+          alert('Tool not found!');
+      }
+    }
+  </script>
+</body>
+</html>
