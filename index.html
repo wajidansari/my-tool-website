@@ -226,6 +226,7 @@
   <!-- Tool Cards Section -->
   <section class="tools" id="tools">
     <div class="container">
+      <!-- Existing Cards -->
       <div class="card">
         <img src="https://via.placeholder.com/80" alt="Calculator">
         <h2>Calculator</h2>
@@ -262,6 +263,62 @@
         <p>Calculate your Body Mass Index.</p>
         <button onclick="openTool('bmi-calculator')">Open Tool</button>
       </div>
+
+      <!-- Additional Cards -->
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Age Calculator">
+        <h2>Age Calculator</h2>
+        <p>Calculate your age in years, months, and days.</p>
+        <button onclick="openTool('age-calculator')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Time Zone Converter">
+        <h2>Time Zone Converter</h2>
+        <p>Convert time between different time zones.</p>
+        <button onclick="openTool('time-zone-converter')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Tip Calculator">
+        <h2>Tip Calculator</h2>
+        <p>Calculate tips for restaurants or services.</p>
+        <button onclick="openTool('tip-calculator')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Loan Calculator">
+        <h2>Loan Calculator</h2>
+        <p>Calculate loan payments and interest rates.</p>
+        <button onclick="openTool('loan-calculator')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Random Number Generator">
+        <h2>Random Number Generator</h2>
+        <p>Generate random numbers within a range.</p>
+        <button onclick="openTool('random-number-generator')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Color Picker">
+        <h2>Color Picker</h2>
+        <p>Pick and customize colors for your projects.</p>
+        <button onclick="openTool('color-picker')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="QR Code Generator">
+        <h2>QR Code Generator</h2>
+        <p>Generate QR codes for URLs or text.</p>
+        <button onclick="openTool('qr-code-generator')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Word Counter">
+        <h2>Word Counter</h2>
+        <p>Count words and characters in your text.</p>
+        <button onclick="openTool('word-counter')">Open Tool</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/80" alt="Temperature Converter">
+        <h2>Temperature Converter</h2>
+        <p>Convert between Celsius, Fahrenheit, and Kelvin.</p>
+        <button onclick="openTool('temperature-converter')">Open Tool</button>
+      </div>
     </div>
   </section>
 
@@ -279,27 +336,48 @@
       switch (toolName) {
         case 'calculator':
           alert('Opening Calculator...');
-          // Add your calculator logic or link here
           break;
         case 'currency-converter':
           alert('Opening Currency Converter...');
-          // Add your currency converter logic or link here
           break;
         case 'notes':
           alert('Opening Notes...');
-          // Add your notes logic or link here
           break;
         case 'password-generator':
           alert('Opening Password Generator...');
-          // Add your password generator logic or link here
           break;
         case 'unit-converter':
           alert('Opening Unit Converter...');
-          // Add your unit converter logic or link here
           break;
         case 'bmi-calculator':
           alert('Opening BMI Calculator...');
-          // Add your BMI calculator logic or link here
+          break;
+        case 'age-calculator':
+          alert('Opening Age Calculator...');
+          break;
+        case 'time-zone-converter':
+          alert('Opening Time Zone Converter...');
+          break;
+        case 'tip-calculator':
+          alert('Opening Tip Calculator...');
+          break;
+        case 'loan-calculator':
+          alert('Opening Loan Calculator...');
+          break;
+        case 'random-number-generator':
+          alert('Opening Random Number Generator...');
+          break;
+        case 'color-picker':
+          alert('Opening Color Picker...');
+          break;
+        case 'qr-code-generator':
+          alert('Opening QR Code Generator...');
+          break;
+        case 'word-counter':
+          alert('Opening Word Counter...');
+          break;
+        case 'temperature-converter':
+          alert('Opening Temperature Converter...');
           break;
         default:
           alert('Tool not found!');
